@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+  
+      
+  {
+     const names = ["Mohamad", "Rizkon", "Nurkholis", "Budi","Joko"];
+     const [firstName, middleName, lastName, ...others] = names;
+
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+      console.info(others);
+  }
+  
+  
+  {
+  const person = {
+    firstName: "Mohamad",
+    lastName: "Rizkon",
+    address: {
+      street: "Jalan sigeblog",
+      city: "Pemalang",
+      country: "Indonesia"
+    },
+    hobby: "game",
+    channel: "Rizkon Vlog"
+  };
+
+    let {firstName, lastName, address:{city, street, country}, ...others} = person;
+    console.info(firstName);
+    console.info(lastName);
+    console.info(city);
+    console.info(street);
+    console.info(country);
+    console.info(others);
+  }
+
+  {
+    function displayPerson({firstName, middleName, lastName}){
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+    }
+
+    const person = {
+      firstName: "Mohamad",
+      middleName: "Rizkon",
+      lastName: "Nurkholis",
+    };
+
+    displayPerson(person);
+  }
+
+  {
+    function sum([first, second]){
+      return first + second;
+    }
+    console.info(sum([1,1]));
+    console.info(sum([10,10]));
+  }
+
+  {
+    const names = ["Mohamad"];
+    const [firstName, middleName = "Rizkon", lastName = "Nurkholis"] = names;
+
+    console.info(firstName);
+    console.info(middleName);
+    console.info(lastName);
+  }
+
+  {
+    const person = {
+    firstName: "Mohamad",
+    lastName: "Nurkholis",
+    
+  };
+
+    let {firstName, middleName = "Rizkon", lastName} = person;
+    console.info(firstName);
+    console.info(middleName);
+    console.info(lastName);
+
+  }
+
+  {
+    const person = {
+    firstName: "Mohamad",
+    lastName: "Nurkholis",
+    
+  };
+
+    let {firstName: namaDepan,
+       middleName: namaTengah = "Rizkon",
+        lastName: namaBelakang} = person;
+    console.info(namaDepan);
+    console.info(namaTengah);
+    console.info(namaBelakang);
+  }
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Function Sebagai Value</title>
+  </head>
+  <body>
+    <script>
+
+        function sayHello(name){
+            document.writeln(`<p>hello ${name}</p>`);
+        }
+
+        sayHello("Rizkon");
+
+        const say = sayHello;
+
+        say("Rizkon");
+
+
+
+
+    </script>
+  </body>
+</html>

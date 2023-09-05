@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Strict Mode</title>
+  </head>
+  <body>
+    <script>
+   
+        function userStrictMode(){
+            "use strict"
+            const person = {
+                    firstName: "Eko"
+                };
+
+                // error yages
+                with (person) {
+                    console.info(firstName);
+                }
+            }
+        
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Masalah Variable Var</title>
+  </head>
+  <body>
+    <script>
+ 
+        // global Scope
+        var i = 20;
+
+        for (var i = 0; i < 10; i++) {
+            // Local Scope
+            console.info(`local ${i}`);
+        }
+
+        console.info(`Global ${i}`);
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        address: {
+          country: 'Bodas',
+        },
+      };
+
+      let country = person?.address?.country;
+
+      document.writeln(`SUCCES`);
+
+      document.writeln(`<p>${country}</p>`);
+
+      document.writeln(`SUKSES`);
+    </script>
+  </body>
+</html>
